@@ -37,6 +37,10 @@ public class PatientController {
     public Patient createPatient(@RequestBody Patient patient) {
         return patientRepository.save(patient);
     }
+    @GetMapping("/")
+    public String hello() {
+        return "App is running!";
+    }
 
     @GetMapping("/patients")
     public List<Patient> getAllPatients() {
